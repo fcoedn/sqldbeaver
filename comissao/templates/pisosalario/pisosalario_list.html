@@ -1,0 +1,39 @@
+{% extends "pisosalario/base.html" %}
+  
+{% block content %}
+<table class="table table-borderless">
+<thead class="border-botton font-weight-bold">
+    <tr>
+        <td>pk_piso_salario </td>
+        <td>vl_piso</td>
+        <td>tx_obs</td>
+        <td>
+            <a href="{% url 'pisosalario_novo' %} " class="btn btn-outline-success">
+                <i class="fas fa-plus"></i> Novo
+            </a>
+        </td>
+    </tr>
+</thead>    
+<tbody>
+    {% for pisosalario in pisosalario_list %}
+        <tr>
+            <td> {{pisosalario.pk_piso_salario}}</td>
+            <td> {{pisosalario.vl_piso}}</td>
+            <td>{{pisosalario.tx_obs}}</td>
+            <td>
+                 <a href="{% url 'pisosalario_altera' pisosalario.pk_piso_salario %}" class="btn text-secondary px-0">
+                  <i class="far fa-edit fa-1g"></i> 
+            </a>
+            <form action="{% url 'pisosalario_exclui' pisosalario.pk_piso_salario %}" method="post" class="d-inline">
+                  {% csrf_token %}
+                  <button type="submit" class="btn">
+                    <i class="far fa-trash-alt fa-1g text-danger float-right"></i>
+                    </button> 
+            </form>
+
+        </td>
+        </tr>
+    {% endfor %}
+</tbody>
+</table>
+{% endblock content %}
