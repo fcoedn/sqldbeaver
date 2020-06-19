@@ -4,7 +4,7 @@ CREATE OR REPLACE FUNCTION dados01.fct_pagtodiavenda()
 AS $function$
 
 
-DECLARE
+declare -- fco fcçjhp
 V_NODIA  numeric(6) := 0;
 V_NODIA0A6 numeric(6) := 0;
 CLIVENDA RECORD;
