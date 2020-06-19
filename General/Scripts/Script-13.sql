@@ -2,7 +2,7 @@
 
 -- Drop table
 
--- DROP TABLE public.django_session;  Franbciscp
+-- DROP TABLE public.django_session;  Franbcisco Final
 
 CREATE TABLE public.django_session (
 	session_key varchar(40) NOT NULL,
