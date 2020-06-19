@@ -2,7 +2,7 @@
 
 -- Drop table Francisco Filho - kokkok
 
--- DROP TABLE public.numeracon;
+-- DROP TABLE public.numeracon; create tale 
 
 CREATE TABLE public.numeracon (  
 	sg_loja varchar(3) NULL,
