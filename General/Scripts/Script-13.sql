@@ -2,7 +2,7 @@
 
 -- Drop table
 
--- DROP TABLE public.auth_user;
+-- DROP TABLE public.auth_user;  ok
 
 CREATE TABLE public.auth_user (
 	id serial NOT NULL,
