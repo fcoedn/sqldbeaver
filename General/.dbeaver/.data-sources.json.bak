@@ -1,0 +1,210 @@
+{
+	"folders": {},
+	"connections": {
+		"postgres-jdbc-16fed44bdd8-9baa7c7e3be66b7": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "PostgreSQL - dbabar",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "172.16.100.54",
+				"port": "5432",
+				"database": "dbabar",
+				"url": "jdbc:postgresql://172.16.100.54:5432/dbabar",
+				"home": "/usr/lib/postgresql/12/bin",
+				"type": "dev",
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false"
+				}
+			},
+			"custom-properties": {
+				"resultset.show.colorizeDataTypes": "true"
+			}
+		},
+		"postgres-jdbc-16ffb8db757-69456fa4158182ed": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "PostgreSQL - dap",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "5432",
+				"database": "dap",
+				"url": "jdbc:postgresql://localhost:5432/dap",
+				"type": "dev",
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false"
+				}
+			}
+		},
+		"postgres-jdbc-17091570fd5-27e0ca58035aba43": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "PostgreSQL - dbancp",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "172.16.2.89",
+				"port": "9000",
+				"database": "dbancp",
+				"url": "jdbc:postgresql://172.16.2.89:9000/dbancp",
+				"type": "dev",
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false"
+				}
+			}
+		},
+		"postgres-jdbc-1724bd13afe-6a45a7c8f5a1cce7": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "PostgreSQL - dbatez",
+			"save-password": true,
+			"show-system-objects": true,
+			"read-only": false,
+			"configuration": {
+				"host": "172.16.2.89",
+				"port": "5470",
+				"database": "dbatez",
+				"url": "jdbc:postgresql://172.16.2.89:5470/dbatez",
+				"type": "dev",
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false"
+				},
+				"auth-model": "native",
+				"handlers": {}
+			},
+			"custom-properties": {
+				"resultset.maxrows": "2000"
+			}
+		},
+		"postgres-jdbc-1724cbf8f4c-32ed25a86c267a89": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "PostgreSQL - dbactb",
+			"save-password": true,
+			"show-system-objects": true,
+			"read-only": false,
+			"configuration": {
+				"host": "172.16.2.222",
+				"port": "6000",
+				"database": "dbactb",
+				"url": "jdbc:postgresql://172.16.2.222:6000/dbactb",
+				"type": "dev",
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false"
+				},
+				"auth-model": "native",
+				"handlers": {}
+			}
+		}
+	},
+	"virtual-models": {
+		"postgres-jdbc-16fed44bdd8-9baa7c7e3be66b7": {
+			"dbabar": {
+				"dbatez": {
+					":lst_itens": {
+						"properties": {
+							"erd.diagram.state": {
+								"serialized": "<diagram version=\"1\" name=\"lst_itens\" time=\"202003031100\"><entities><data-source id=\"postgres-jdbc-16fed44bdd8-9baa7c7e3be66b7\"><entity id=\"1\" name=\"lst_itens\" fq-name=\"dbatez.lst_itens\" order=\"0\" color-bg=\"255,128,64\" x=\"20\" y=\"20\"><path name=\"dbatez\"/><path name=\"dbabar\"/></entity></data-source></entities><relations/></diagram>"
+							}
+						},
+						"constraints": {
+							"lst_itens_VK": {
+								"type": "vpk",
+								"attributes": [
+									"fk_lst_presente"
+								]
+							}
+						}
+					},
+					":lst_cliente": {
+						"constraints": {
+							"lst_cliente_VK": {
+								"type": "vpk",
+								"attributes": [
+									"fk_cliente"
+								]
+							}
+						}
+					},
+					":cliente": {
+						"constraints": {
+							"cliente_VK": {
+								"type": "vpk",
+								"attributes": [
+									"no_apelido"
+								]
+							}
+						},
+						"foreign-keys": [
+							{
+								"entity": "database://postgres-jdbc-16fed44bdd8-9baa7c7e3be66b7/dbabar/org.jkiss.dbeaver.ext.postgresql.model.PostgreSchema/dbatez/org.jkiss.dbeaver.ext.postgresql.model.PostgreTable/lst_cliente",
+								"constraint": "lst_cliente_VK",
+								"attributes": {
+									"pk_cliente": "fk_cliente"
+								}
+							}
+						]
+					},
+					":lst_evento": {
+						"properties": {
+							"erd.diagram.state": {
+								"serialized": "<diagram version=\"1\" name=\"lst_presente\" time=\"202003031128\"><entities><data-source id=\"postgres-jdbc-16fed44bdd8-9baa7c7e3be66b7\"><entity id=\"1\" name=\"lst_presente\" fq-name=\"dbatez.lst_presente\" order=\"0\" color-bg=\"255,128,64\" x=\"254\" y=\"273\"><path name=\"dbatez\"/><path name=\"dbabar\"/></entity><entity id=\"2\" name=\"lst_itens\" fq-name=\"dbatez.lst_itens\" order=\"1\" x=\"32\" y=\"21\"><path name=\"dbatez\"/><path name=\"dbabar\"/></entity><entity id=\"3\" name=\"lst_cliente\" fq-name=\"dbatez.lst_cliente\" order=\"2\" x=\"294\" y=\"2\"><path name=\"dbatez\"/><path name=\"dbabar\"/></entity><entity id=\"4\" name=\"contrato\" fq-name=\"dbatez.contrato\" order=\"3\" x=\"10\" y=\"279\"><path name=\"dbatez\"/><path name=\"dbabar\"/></entity><entity id=\"5\" name=\"cliente\" fq-name=\"dbatez.cliente\" order=\"4\" border-width=\"3\" x=\"703\" y=\"7\"><path name=\"dbatez\"/><path name=\"dbabar\"/></entity></data-source></entities><relations><relation name=\"vfk_lst_presente_lst_itens\" type=\"vfk\" pk-ref=\"2\" fk-ref=\"1\"/><relation name=\"vfk_lst_presente_lst_cliente\" type=\"vfk\" pk-ref=\"3\" fk-ref=\"1\"/><relation name=\"vfk_cliente_lst_cliente\" type=\"vfk\" pk-ref=\"3\" fk-ref=\"5\"/><relation name=\"vfk_lst_presente_contrato\" type=\"vfk\" pk-ref=\"4\" fk-ref=\"1\"/></relations></diagram>"
+							}
+						},
+						"foreign-keys": [
+							{
+								"entity": "database://postgres-jdbc-16fed44bdd8-9baa7c7e3be66b7/dbabar/org.jkiss.dbeaver.ext.postgresql.model.PostgreSchema/dbatez/org.jkiss.dbeaver.ext.postgresql.model.PostgreTable/lst_itens",
+								"constraint": "lst_itens_VK",
+								"attributes": {
+									"pk_lst_presente": "fk_lst_presente"
+								}
+							},
+							{
+								"entity": "database://postgres-jdbc-16fed44bdd8-9baa7c7e3be66b7/dbabar/org.jkiss.dbeaver.ext.postgresql.model.PostgreSchema/dbatez/org.jkiss.dbeaver.ext.postgresql.model.PostgreTable/lst_cliente",
+								"constraint": "lst_cliente_VK",
+								"attributes": {
+									"pk_lst_presente": "fk_lst_presente"
+								}
+							},
+							{
+								"entity": "database://postgres-jdbc-16fed44bdd8-9baa7c7e3be66b7/dbabar/org.jkiss.dbeaver.ext.postgresql.model.PostgreSchema/dbatez/org.jkiss.dbeaver.ext.postgresql.model.PostgreTable/contrato",
+								"constraint": "contrato_pkey",
+								"attributes": {
+									"fk_chave_con": "cd_chave_con"
+								}
+							}
+						]
+					}
+				}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false
+		}
+	}
+}

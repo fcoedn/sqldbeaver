@@ -1,0 +1,32 @@
+{
+	"7f2f6703-17fd-45ef-bbdd-bb0a532549f9": {
+		"task": "pgDatabaseBackup",
+		"label": "ff",
+		"description": "",
+		"createTime": "202005251448",
+		"updateTime": "202005251448",
+		"state": {
+			"project": "General",
+			"dataSource": "postgres-jdbc-16fed44bdd8-9baa7c7e3be66b7",
+			"databaseObjects": [
+				"postgres-jdbc-16fed44bdd8-9baa7c7e3be66b7/dbabar/dbatez"
+			],
+			"clientHomeName": "/home/francisco/Projetos",
+			"export.outputFilePattern": "dump-${database}-${timestamp}.sql",
+			"export.outputFolder": "/usr/share/dbeaver",
+			"pg.format": "CUSTOM",
+			"pg.export.showViews": "false",
+			"pg.export.useInserts": "false",
+			"pg.export.noPrivileges": "false",
+			"pg.export.noOwner": "false",
+			"exportObjects": [
+				{
+					"database": "postgres-jdbc-16fed44bdd8-9baa7c7e3be66b7/dbabar",
+					"schemas": [
+						"dbatez"
+					]
+				}
+			]
+		}
+	}
+}

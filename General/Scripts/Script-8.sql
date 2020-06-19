@@ -4,7 +4,7 @@ CREATE OR REPLACE FUNCTION dados01.fct_pagtodiavenda()
 AS $function$
 
 
-declare -- fco fcçjhp
+declare -- git tesste  final ok
 V_NODIA  numeric(6) := 0;
 V_NODIA0A6 numeric(6) := 0;
 CLIVENDA RECORD;
