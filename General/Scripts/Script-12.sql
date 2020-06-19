@@ -1,10 +1,10 @@
 -- public.numeracon definition
 
--- Drop table Francisco Filho
+-- Drop table Francisco Filho - kokkok
 
 -- DROP TABLE public.numeracon;
 
-CREATE TABLE public.numeracon (
+CREATE TABLE public.numeracon (  
 	sg_loja varchar(3) NULL,
 	tp_contrato numeric(2) NULL,
 	tp_fin numeric(2) NULL,
